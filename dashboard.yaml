@@ -1,0 +1,380 @@
+title: Home Dashboard
+views:
+  - title: Home
+    icon: mdi:home
+    path: home
+    badges: []
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            content: |
+              # Home Dashboard
+            style: |
+              ha-card {
+                font-size: 24px;
+                text-align: center;
+                padding: 16px;
+                box-shadow: none;
+                background: transparent;
+              }
+          
+          # Personalized Dashboard Section
+          - type: horizontal-stack
+            cards:
+              - type: custom:button-card
+                entity: group.hacontrol_01
+                name: Dashboard for
+                label: Sysadmin
+                icon: mdi:account-cog
+                show_label: true
+                show_icon: true
+                aspect_ratio: 1/1
+                styles:
+                  card:
+                    - padding: 10px
+                    - border-radius: 15px
+                    - background-color: '#5822af21'
+                  icon:
+                    - color: '#5822af'
+              
+              - type: custom:button-card
+                entity: group.hacontrol_02
+                name: Dashboard for
+                label: Fanus
+                icon: mdi:account
+                show_label: true
+                show_icon: true
+                aspect_ratio: 1/1
+                styles:
+                  card:
+                    - padding: 10px
+                    - border-radius: 15px
+                    - background-color: '#1e88e521'
+                  icon:
+                    - color: '#1e88e5'
+          
+          - type: horizontal-stack
+            cards:
+              - type: custom:button-card
+                entity: group.hacontrol_03
+                name: Dashboard for
+                label: Avi
+                icon: mdi:account-child
+                show_label: true
+                show_icon: true
+                aspect_ratio: 1/1
+                styles:
+                  card:
+                    - padding: 10px
+                    - border-radius: 15px
+                    - background-color: '#e5201e21'
+                  icon:
+                    - color: '#e5201e'
+              
+              - type: custom:button-card
+                entity: todo.shopping_list
+                name: Tasks
+                label: and Lists
+                icon: mdi:format-list-checks
+                show_label: true
+                show_icon: true
+                aspect_ratio: 1/1
+                styles:
+                  card:
+                    - padding: 10px
+                    - border-radius: 15px
+                    - background-color: '#e5bb1e21'
+                  icon:
+                    - color: '#e5bb1e'
+
+          # Room Control Section
+          - type: markdown
+            content: |
+              ## Room Control
+            style: |
+              ha-card {
+                font-size: 18px;
+                text-align: left;
+                padding: 16px 16px 0 16px;
+                box-shadow: none;
+                background: transparent;
+                color: #3f8db9;
+              }
+          
+          # First row of room controls
+          - type: horizontal-stack
+            cards:
+              - type: custom:button-card
+                entity: light.living_room_lamp
+                name: Living Room
+                icon: mdi:home
+                aspect_ratio: 1/1
+                styles:
+                  card:
+                    - background-color: '#f5f5f5'
+                    - border-radius: 15px
+                  name:
+                    - opacity: 0
+                tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/living-room
+                
+              - type: custom:button-card
+                entity: media_player.sony_xr_77a80j
+                name: TV
+                icon: mdi:television
+                aspect_ratio: 1/1
+                styles:
+                  card:
+                    - background-color: '#f5f5f5'
+                    - border-radius: 15px
+                  name:
+                    - opacity: 0
+                tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/media
+                
+              - type: custom:button-card
+                entity: light.extended_color_light_4
+                name: Office
+                icon: mdi:package-variant-closed
+                aspect_ratio: 1/1
+                styles:
+                  card:
+                    - background-color: '#f5f5f5'
+                    - border-radius: 15px
+                  name:
+                    - opacity: 0
+                tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/office
+          
+          # Second row of room controls
+          - type: horizontal-stack
+            cards:
+              - type: custom:button-card
+                entity: light.hw3
+                name: Hallway
+                icon: mdi:door
+                aspect_ratio: 1/1
+                styles:
+                  card:
+                    - background-color: '#f5f5f5'
+                    - border-radius: 15px
+                  name:
+                    - opacity: 0
+                tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/hallway
+                
+              - type: custom:button-card
+                entity: media_player.bedroom
+                name: Bathroom
+                icon: mdi:shower
+                aspect_ratio: 1/1
+                styles:
+                  card:
+                    - background-color: '#f5f5f5'
+                    - border-radius: 15px
+                  name:
+                    - opacity: 0
+                tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/bathroom
+                
+              - type: custom:button-card
+                entity: light.my_side
+                name: Bedroom
+                icon: mdi:bed
+                aspect_ratio: 1/1
+                styles:
+                  card:
+                    - background-color: '#f5f5f5'
+                    - border-radius: 15px
+                  name:
+                    - opacity: 0
+                tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/bedroom
+          
+          # Third row of room controls
+          - type: horizontal-stack
+            cards:
+              - type: custom:button-card
+                entity: light.guest_side
+                name: Guest Room
+                icon: mdi:car
+                aspect_ratio: 1/1
+                styles:
+                  card:
+                    - background-color: '#f5f5f5'
+                    - border-radius: 15px
+                  name:
+                    - opacity: 0
+                tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/guest
+                
+              - type: custom:button-card
+                entity: media_player.denon_avr_x4500h
+                name: Cinema
+                icon: mdi:theater
+                aspect_ratio: 1/1
+                styles:
+                  card:
+                    - background-color: '#f5f5f5'
+                    - border-radius: 15px
+                  name:
+                    - opacity: 0
+                tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/cinema
+                
+              - type: custom:button-card
+                entity: weather.forecast_home_2
+                name: Garden
+                icon: mdi:tree
+                aspect_ratio: 1/1
+                styles:
+                  card:
+                    - background-color: '#f5f5f5'
+                    - border-radius: 15px
+                  name:
+                    - opacity: 0
+                tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/garden
+
+          # Home Control Section
+          - type: markdown
+            content: |
+              ## Home Control
+            style: |
+              ha-card {
+                font-size: 18px;
+                text-align: left;
+                padding: 16px 16px 0 16px;
+                box-shadow: none;
+                background: transparent;
+                color: #3f8db9;
+              }
+          
+          # First row of home controls
+          - type: horizontal-stack
+            cards:
+              - type: custom:button-card
+                entity: lock.front_door
+                name: Security
+                icon: mdi:shield
+                aspect_ratio: 1/1
+                styles:
+                  card:
+                    - background-color: '#f5f5f5'
+                    - border-radius: 15px
+                    - min-height: 100px
+                  name:
+                    - opacity: 0
+                tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/security
+                
+              - type: custom:button-card
+                entity: media_player.everywhere
+                name: Cast
+                icon: mdi:cast
+                aspect_ratio: 1/1
+                styles:
+                  card:
+                    - background-color: '#f5f5f5'
+                    - border-radius: 15px
+                    - min-height: 100px
+                  name:
+                    - opacity: 0
+                tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/cast
+                
+              - type: custom:button-card
+                entity: sensor.backup_backup_manager_state
+                name: Energy
+                icon: mdi:home-thermometer-outline
+                aspect_ratio: 1/1
+                styles:
+                  card:
+                    - background-color: '#f5f5f5'
+                    - border-radius: 15px
+                    - min-height: 100px
+                  name:
+                    - opacity: 0
+                tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/energy
+          
+          # Second row of home controls         
+          - type: horizontal-stack
+            cards:
+              - type: custom:button-card
+                entity: automation.new_automation
+                name: Automation
+                icon: mdi:home-automation
+                aspect_ratio: 1/1
+                styles:
+                  card:
+                    - background-color: '#f5f5f5'
+                    - border-radius: 15px
+                    - min-height: 100px
+                  name:
+                    - opacity: 0
+                tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/automation
+  
+  # Additional Views
+  - title: Living Room
+    path: living-room
+    icon: mdi:sofa
+    badges: []
+    cards:
+      - type: entities
+        title: Living Room Lights
+        entities:
+          - entity: light.living_room_lamp
+          - entity: light.extended_color_light_4
+      - type: media-control
+        entity: media_player.sony_xr_77a80j
+  
+  - title: Bedroom
+    path: bedroom
+    icon: mdi:bed
+    badges: []
+    cards:
+      - type: entities
+        title: Bedroom Lights
+        entities:
+          - entity: light.my_side
+          - entity: light.guest_side
+      - type: media-control
+        entity: media_player.bedroom
+  
+  - title: Media
+    path: media
+    icon: mdi:television
+    badges: []
+    cards:
+      - type: media-control
+        entity: media_player.sony_xr_77a80j
+      - type: media-control
+        entity: media_player.living_room_apple_tv
+      - type: media-control
+        entity: media_player.denon_avr_x4500h
+  
+  - title: Security
+    path: security
+    icon: mdi:shield
+    badges: []
+    cards:
+      - type: entities
+        title: Locks
+        entities:
+          - entity: lock.front_door
